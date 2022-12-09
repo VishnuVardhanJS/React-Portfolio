@@ -11,7 +11,7 @@ export function StateProvider(props) {
         axios.get(`https://get-population.p.rapidapi.com/population`, {
             headers: {
                 'x-rapidapi-host': 'get-population.p.rapidapi.com',
-                'x-rapidapi-key': 'a556db9708mshadcf903289ebad9p162bdajsn64304e5247f1',
+                'x-rapidapi-key': 'API_KEY',
             },
             // params: { category: 'all', count: '1' },
         })
