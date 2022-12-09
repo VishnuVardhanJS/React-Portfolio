@@ -15,13 +15,12 @@ import {isMobile} from 'react-device-detect';
 //     console.log([mousex, mousey]); // Prints data
 //   });
 
-function BufferPoints({ count = 6000 }) {
+function BufferPoints({ count = 4000 }) {
     const texImg = useLoader(THREE.TextureLoader, circle)
     const points = useMemo(() => {
         const points = new Array(count).fill(0).map((v) => (0.5 - Math.random()) * 15);
         return new BufferAttribute(new Float32Array(points), 3);
     }, [count]);
-
 
     const ref = useRef()
     useFrame((state) => {
@@ -30,7 +29,7 @@ function BufferPoints({ count = 6000 }) {
             if (state.mouse.x !== 0) {
                 camera.position.x =  -(state.mouse.x * 0.7)
                 camera.position.y =  -(state.mouse.y * 0.7) 
-                console.log(state.mouse.x, "  ", state.mouse.y)
+                // console.log(state.mouse.x, "  ", state.mouse.y)
             }
         }
 
@@ -64,7 +63,7 @@ const StarsBg = () => {
                 <OrbitControls
                     enableZoom={false}
                     autoRotate={true}
-                    autoRotateSpeed={1.0}
+                    autoRotateSpeed={0.7}
                     enablePan={false}
                     enableRotate={false}
                 />

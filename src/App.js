@@ -1,41 +1,67 @@
-import React, { useRef } from 'react'
+import React, { useRef, useEffect, useContext } from 'react'
 import './index.css'
 import HeyText from './components/HeyText';
 import StarsBg from './components/StarsBg';
-import { Animator, ScrollContainer, ScrollPage, batch, Fade, FadeIn, 
-  FadeOut, Move, MoveIn, MoveOut, Sticky, StickyIn, StickyOut, Zoom, ZoomIn, ZoomOut } from "react-scroll-motion";
+import {
+  Animator, ScrollContainer, ScrollPage, Move, Sticky, FadeIn, batch, Fade
+} from "react-scroll-motion";
+import "animate.css/animate.min.css";
+import { setStates } from './contexts/context';
+import FlipNumbers from "react-flip-numbers";
+import Cards from './components/Cards';
+import {RemoveScrollBar} from 'react-remove-scroll-bar';
 
-  // document.addEventListener("mousemove", (event) => {
-  //   let mousex = event.clientX; // Gets Mouse X
-  //   let mousey = event.clientY; // Gets Mouse Y
-  //   console.log([mousex, mousey]); // Prints data
-  // });
+const FadeUp = batch(Fade(), Move(), Sticky());
 
 export default function App() {
-  return (
-    <ScrollContainer>
-      
-       <ScrollPage key={0}>
-          <Animator>
-            <div className='homeText'>
-              <HeyText />
-            </div>
-          </Animator>
-          <div className='down-arrow' />
-      </ScrollPage>
 
-      <ScrollPage key={1}>
-        <div style={{ display: "flex", justifyContent: "center", alignItems: "center", height: "100%", color: "#fff" }} >
-          <span style={{ fontSize: "40px" }}>
-            <Animator animation={MoveIn(-1000, 0)}>Hello Guys 👋🏻</Animator>
-            <Animator animation={MoveIn(1000, 0)}>Nice to meet you 🙋🏻‍♀️</Animator>
-            - I'm Dante Chun -
-            <Animator animation={MoveOut(1000, 0)}>Good bye ✋🏻</Animator>
-            <Animator animation={MoveOut(-1000, 0)}>See you 💛</Animator>
-          </span>
-        </div>
-      </ScrollPage>
+  const { population, setPopulation, FetchPopulation } = useContext(setStates)
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      FetchPopulation()
+    }, 1000);
+    return () => clearInterval(interval);
+  }, [FetchPopulation])
+
+  return (
+    <div>
       <StarsBg />
-    </ScrollContainer> 
+      <ScrollContainer>
+        <ScrollPage key={0}>
+          <div className='homeText'>
+            <HeyText />
+          </div>
+          <div className='down-arrow' />
+        </ScrollPage>
+
+        <ScrollPage key={1}>
+          <div className='nameContainer'>
+            <span style={{ fontSize: "50px", color: '#FCD900' }}>
+              <Animator animation={FadeUp}>{
+                <div className='FlexText'>
+                <FlipNumbers
+                  height={40}
+                  width={40}
+                  color="white"
+                  background="black"
+                  play
+                  perspective={400}
+                  numbers={'Among' + String(population + 'People.')}
+                />
+                Why Choose Me?
+                <div className='CardsContainer'>
+                  <Cards />
+                </div>
+                </div>
+        
+              }</Animator>
+            </span>
+          </div>
+          <div className='down-arrow' />
+        </ScrollPage>
+      </ScrollContainer>
+      
+    </div>
   )
 }
