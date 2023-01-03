@@ -6,6 +6,8 @@ import Typography from '@mui/material/Typography';
 import { CardActionArea } from '@mui/material';
 import Smile from "../assets/Images/Route.jpg"
 
+
+
 const Repos = [{
     name: 'Emo Analysis',
     description: 'sentiment analysis chatbot which gives out sentiments scores according to the chats',
@@ -40,29 +42,30 @@ export default function Cards() {
     return (
         <div className='Cards'>
             {Repos.map((u, i) => {
-                return(
-                <Card sx={{ maxWidth: 220, backgroundColor: "#121212"}} onClick={() => { submitClick(u.link) }}>
-                    <CardActionArea>
-                        <CardMedia
-                            component="img"
-                            height="140"
-                            image= {u.image}
-                            alt="Oops! Image not found"
-                            color="grey"
-                            opacity="100"
-                            zIndex="100"
-                        />
-                        <CardContent style={{backgroundColor: "#121212"}}>
-                            <Typography gutterBottom variant="h5" component="div" color="#fff">
-                                {u.name}
-                            </Typography>
-                            <Typography variant="body2" color="#fff">
-                                {u.description}
-                            </Typography>
-                        </CardContent>
-                    </CardActionArea>
-                </Card>
-            )
+                return (
+                    <Card sx={{ maxWidth: 220, backgroundColor: "#000", paddingLeft: 10}} onClick={() => { submitClick(u.link) }}>
+                        <CardActionArea>
+                            <CardMedia
+                                component="img"
+                                height="140"
+                                image= {u.image}
+                                alt="Oops! Image not found"
+                                color="grey"
+                                opacity="100"
+                                zIndex="100"
+                            />
+                            <CardContent style={{backgroundColor: "#121212"}}>
+                                <Typography gutterBottom variant="h5" component="div" color="#fff">
+                                    {u.name}
+                                </Typography>
+                                <Typography variant="body2" color="#fff">
+                                    {u.description}
+                                </Typography>
+                            </CardContent>
+                        </CardActionArea>
+                    </Card>
+
+                )
             })}
         </div>
 

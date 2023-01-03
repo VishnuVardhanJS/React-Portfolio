@@ -1,5 +1,5 @@
 import "../index.css"
-import React, { useMemo, useRef } from 'react'
+import React, { useMemo, useRef, useContext, useState, useEffect } from 'react'
 import * as THREE from "three"
 import { Canvas, useLoader, useFrame, useThree } from "@react-three/fiber"
 import circle from "../assets/star.png"
@@ -7,15 +7,18 @@ import { OrbitControls } from "@react-three/drei"
 import { BufferAttribute, Clock } from "three"
 import {isMobile} from 'react-device-detect';
 
-// let mousex = 0
-// let mousey = 0
-// document.addEventListener("mousemove", (event) => {
-//     mousex = event.clientX; // Gets Mouse X
-//     mousey = event.clientY; // Gets Mouse Y
-//     console.log([mousex, mousey]); // Prints data
-//   });
+let mousex = 0
+let mousey = 0
+document.addEventListener("mousemove", (event) => {
+    mousex = event.clientX/3000; // Gets Mouse X
+    mousey = event.clientY/3000; // Gets Mouse Y
+    // console.log("top" + [mousex/3000, mousey/3000]); // Prints data
+  });
+
+
 
 function BufferPoints({ count = 4000 }) {
+   
     const texImg = useLoader(THREE.TextureLoader, circle)
     const points = useMemo(() => {
         const points = new Array(count).fill(0).map((v) => (0.5 - Math.random()) * 15);
@@ -29,7 +32,8 @@ function BufferPoints({ count = 4000 }) {
             if (state.mouse.x !== 0) {
                 camera.position.x =  -(state.mouse.x * 0.7)
                 camera.position.y =  -(state.mouse.y * 0.7) 
-                // console.log(state.mouse.x, "  ", state.mouse.y)
+                
+                // console.log([state.mouse.x, state.mouse.y])
             }
         }
 

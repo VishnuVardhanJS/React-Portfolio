@@ -5,7 +5,8 @@ export const setStates = createContext()
 
 export function StateProvider(props) {
 
-    const [population, setPopulation] = useState('')
+    const [population, setPopulation] = useState('8,000,000,000')
+    const [mousePos, setMousePos] = useState({});
 
     const FetchPopulation = () => {
         axios.get(`https://get-population.p.rapidapi.com/population`, {
@@ -29,7 +30,7 @@ export function StateProvider(props) {
 
     return (
         <setStates.Provider value={{
-            population, setPopulation, FetchPopulation
+            population, setPopulation, FetchPopulation, mousePos, setMousePos
         }}>
         {props.children}
         </setStates.Provider>

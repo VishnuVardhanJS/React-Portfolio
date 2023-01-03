@@ -9,13 +9,13 @@ import "animate.css/animate.min.css";
 import { setStates } from './contexts/context';
 import FlipNumbers from "react-flip-numbers";
 import Cards from './components/Cards';
-import {RemoveScrollBar} from 'react-remove-scroll-bar';
+import { RemoveScrollBar } from 'react-remove-scroll-bar';
 
 const FadeUp = batch(Fade(), Move(), Sticky());
 
 export default function App() {
 
-  const { population, setPopulation, FetchPopulation } = useContext(setStates)
+  const { population, FetchPopulation, setMousePos, mousePos } = useContext(setStates)
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -23,6 +23,7 @@ export default function App() {
     }, 1000);
     return () => clearInterval(interval);
   }, [FetchPopulation])
+
 
   return (
     <div>
@@ -40,28 +41,27 @@ export default function App() {
             <span style={{ fontSize: "50px", color: '#FCD900' }}>
               <Animator animation={FadeUp}>{
                 <div className='FlexText'>
-                <FlipNumbers
-                  height={40}
-                  width={40}
-                  color="white"
-                  background="black"
-                  play
-                  perspective={400}
-                  numbers={'Among' + String(population + 'People.')}
-                />
-                Why Choose Me?
-                <div className='CardsContainer'>
-                  <Cards />
+                  <FlipNumbers
+                    height={40}
+                    width={40}
+                    color="white"
+                    background="black"
+                    play
+                    perspective={400}
+                    numbers={'Among' + String(population + 'People.')}
+                  />
+                  Why Choose Me?
+                  <div className='CardsContainer'>
+                    <Cards />
+                  </div>
                 </div>
-                </div>
-        
               }</Animator>
             </span>
           </div>
           <div className='down-arrow' />
         </ScrollPage>
       </ScrollContainer>
-      
+
     </div>
   )
 }

@@ -92,41 +92,35 @@ body {
 }
 
 
-.nameContainer {
-  display: "flex";
-  position: absolute;
-  justify-content: center;
-  align-items: center;
-  height: "100%";
-  color: aliceblue;
-}
-
 .FlexText{
   font-family: Ubuntu;
-  transform: translate(-25px,-150px);
+  transform: translate(-200px,-150px);
   padding-bottom: 100px;
+  z-index: 100;
 }
 
 .Cards{
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  z-index: 100;
+display: flex;
+flex-direction: row;
+align-items: center;
 }
 
 .CardsContainer{
-  position: fixed;
+  position: absolute;
   width: 100vw;
-  left: -30%;
   padding-top: 50px;
-  z-index: 100;
+  align-items: center;
+  justify-content: center;
+  /* padding-left: 50px; */
+}
+.nameContainer{
+  z-index: 3;
 }
 
 
 @media only screen and (min-width: 1200px) {
   .Particles {
-    z-index: 20;
+    z-index: 1;
   }
 }
 
