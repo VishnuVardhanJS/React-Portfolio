@@ -1,9 +1,9 @@
 import "../index.css"
 import React, { useMemo, useRef, useContext, useState, useEffect } from 'react'
 import * as THREE from "three"
-import { Canvas, useLoader, useFrame, useThree } from "@react-three/fiber"
+import { Canvas, useLoader, useFrame } from "@react-three/fiber"
 import circle from "../assets/star.png"
-import { OrbitControls } from "@react-three/drei"
+import { OrbitControls, useCursor } from "@react-three/drei"
 import { BufferAttribute, Clock } from "three"
 import {isMobile} from 'react-device-detect';
 
@@ -25,6 +25,7 @@ function BufferPoints({ count = 4000 }) {
         return new BufferAttribute(new Float32Array(points), 3);
     }, [count]);
 
+    
     const ref = useRef()
     useFrame((state) => {
         const { camera } = state
@@ -43,7 +44,7 @@ function BufferPoints({ count = 4000 }) {
         <points>
             <bufferGeometry>
                 <bufferAttribute
-                    // ref={ref}
+                    ref={ref}
                     attach={"attributes-position"}
                     {...points} 
                     />
@@ -60,6 +61,7 @@ function BufferPoints({ count = 4000 }) {
 }
 
 const StarsBg = () => {
+    const cursor = useCursor()
     return (
         <div className="Particles">
             <Canvas>
@@ -69,7 +71,6 @@ const StarsBg = () => {
                     autoRotate={true}
                     autoRotateSpeed={0.7}
                     enablePan={false}
-                    enableRotate={false}
                 />
             </Canvas>
         </div>

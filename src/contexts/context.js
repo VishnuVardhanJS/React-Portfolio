@@ -1,6 +1,8 @@
 import React, {useState, useEffect, createContext, useContext} from 'react'
 import axios from 'axios'
 
+const api_keys = require("./api_keys.json")
+
 export const setStates = createContext()
 
 export function StateProvider(props) {
@@ -8,11 +10,13 @@ export function StateProvider(props) {
     const [population, setPopulation] = useState('8,000,000,000')
     const [mousePos, setMousePos] = useState({});
 
+    
+
     const FetchPopulation = () => {
         axios.get(`https://get-population.p.rapidapi.com/population`, {
             headers: {
-                'x-rapidapi-host': 'get-population.p.rapidapi.com',
-                'x-rapidapi-key': 'API_KEY',
+                'x-rapidapi-host': api_keys['host'],
+                'x-rapidapi-key': api_keys['key'],
             },
             // params: { category: 'all', count: '1' },
         })
