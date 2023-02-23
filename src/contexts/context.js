@@ -1,6 +1,21 @@
 import React, {useState, useEffect, createContext, useContext} from 'react'
 import axios from 'axios'
 
+//Git ignored api keys add the api keys from the population api from rapid api
+//https://rapidapi.com/evikza/api/get-population/
+
+//------------xxxxxxxxxxxxxxxx------------------
+
+//api_keys format: 
+/* 
+{
+    "host": "host_name",
+    "key": "api_key"
+}
+
+*/
+
+
 const api_keys = require("./api_keys.json")
 
 export const setStates = createContext()
