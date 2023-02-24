@@ -42,7 +42,7 @@ export default function Cards() {
         <div className='Cards'>
             {Repos.map((u, i) => {
                 return (
-                    <Card sx={{ maxWidth: 220, backgroundColor: "#000", paddingLeft: 10}} onClick={() => { submitClick(u.link) }}>
+                    <Card sx={{ maxWidth: 220, backgroundColor: "#000"}} onClick={() => { submitClick(u.link) }}>
                         <CardActionArea>
                             <CardMedia
                                 component="img"

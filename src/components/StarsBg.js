@@ -73,7 +73,7 @@ const StarsBg = () => {
                         <OrbitControls
                             enableZoom={false}
                             autoRotate={true}
-                            autoRotateSpeed={0.7}
+                            autoRotateSpeed={0.3}
                             enablePan={false}
                         />
                     </Canvas>
