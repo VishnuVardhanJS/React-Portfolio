@@ -30,6 +30,7 @@ export default function App() {
       <StarsBg />
       <ScrollContainer>
         <ScrollPage key={0}>
+
           <div className='homeText'>
             <HeyText />
           </div>
@@ -51,11 +52,16 @@ export default function App() {
                     numbers={'Among' + String(population + 'People.')}
                   />
                   Why Choose Me?
+                  <div className='stars_pg_2'>
+                    <StarsBg />
+                  </div>
                   <div className='CardsContainer'>
                     <Cards />
                   </div>
+
                 </div>
               }</Animator>
+
             </span>
           </div>
           <div className='down-arrow' />

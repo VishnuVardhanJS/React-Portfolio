@@ -17,6 +17,7 @@ body {
   -ms-overflow-style: none;
   scrollbar-width: none;
   overflow: visible;
+  scroll-snap-type: y mandatory;
 }
 
 ::-webkit-scrollbar {
@@ -26,10 +27,9 @@ body {
 .Particles {
   height: 100vh;
   width: 100vw;
-  position:fixed;
+  position:absolute;
   top: 0%;
   left: 0%;
-  
 }
 
 .heyText {
@@ -112,10 +112,18 @@ align-items: center;
   padding-top: 50px;
   align-items: center;
   justify-content: center;
-  /* padding-left: 50px; */
+  z-index: 50;
 }
 .nameContainer{
   z-index: 3;
+}
+
+
+.stars_pg_2{
+  justify-content: center;
+  position: relative;
+  top: -300px;
+  left: -230px;
 }
 
 
@@ -131,5 +139,9 @@ align-items: center;
     transform: scale(0.4);
     padding-top: -500px;
     position: relative;
+  }
+
+  .Particles {
+    position: fixed;
   }
 }
