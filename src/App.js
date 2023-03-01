@@ -83,7 +83,7 @@ export default function App() {
               <Animator animation={FadeUp}>{
                 <div>
                   <div className='pepTalk'>
-                    Pep Talk?.... Ping me
+                    Pep Talk?... Ping me
                   </div>
                   <div className='socialsContainer'>
                     <img src={github} className="icons" alt="GitHub" onClick={() => { submitClick("https://github.com/VishnuVardhanJS") }} />
@@ -101,8 +101,6 @@ export default function App() {
               </div>
             </span>
           </div>
-
-          <div className='down-arrow' />
         </ScrollPage>
       </ScrollContainer>
 
