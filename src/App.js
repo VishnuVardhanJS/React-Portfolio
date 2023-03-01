@@ -101,6 +101,9 @@ export default function App() {
               </div>
             </span>
           </div>
+          <div className='footer'>
+            Note: Try in Desktop for more Immersive Experience
+          </div>
         </ScrollPage>
       </ScrollContainer>
 

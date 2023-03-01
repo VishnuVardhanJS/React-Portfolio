@@ -26,11 +26,19 @@ const Repos = [{
     link: 'https://github.com/VishnuVardhanJS/Optimizing-Delivery-Routes'
 },
 {
-    name: 'Jett SnapChat Filter',
-    description: 'Simple Snapchat filter for Jett from Valorant using SnapChat\'s',
-    image: require('../assets/Images/Jett.jpg'),
-    link: 'https://github.com/VishnuVardhanJS/Jett-SnapChat-Filter'
+    name: 'FitBit API',
+    description: 'Accessing FitBit data using FitBit api with Oatuh 2.0 tokens',
+    image: require('../assets/Images/FitBit.jpeg'),
+    link: 'https://github.com/VishnuVardhanJS/FitBit-API-Dashboard'
 },
+
+// {
+//     name: 'Jett SnapChat Filter',
+//     description: 'Simple Snapchat filter for Jett from Valorant using SnapChat\'s',
+//     image: require('../assets/Images/Jett.jpg'),
+//     link: 'https://github.com/VishnuVardhanJS/Jett-SnapChat-Filter'
+// },
+
 ]
 
 export default function Cards() {
