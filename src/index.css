@@ -17,7 +17,7 @@ body {
   -ms-overflow-style: none;
   scrollbar-width: none;
   overflow: visible;
-  scroll-snap-type: y proximity;
+  scroll-snap-type: y mandatory;
 }
 
 ::-webkit-scrollbar {
@@ -150,6 +150,8 @@ gap: 100px;
   display: flex;
   top: 50px;
   gap: 100px;
+  font-size: 20px;
+  text-align: center;
 }
 
 .icons{
@@ -187,13 +189,15 @@ gap: 100px;
   .socialsContainer{
     position: relative;
     gap: 10px;
+    transform: scale(0.8);
+    
   }
 
   .pepTalk{
     position: absolute;
-    top: -50%;
+    top: -10%;
     left: -50%;
-    margin-left: 20px;
+    margin-left: 130px;
     transform: scale(0.5);
 
   }

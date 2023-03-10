@@ -86,18 +86,33 @@ export default function App() {
                     Pep Talk?... Ping me
                   </div>
                   <div className='socialsContainer'>
-                    <img src={github} className="icons" alt="GitHub" onClick={() => { submitClick("https://github.com/VishnuVardhanJS") }} />
-                    <img src={discord} className="icons" alt="Discord" onClick={() => { submitClick("https://discordapp.com/users/484766045920296961") }} />
-                    <img src={linkedin} className="icons" alt="LinkedIn" onClick={() => { submitClick("https://www.linkedin.com/in/vishnuvardhanjs/") }} />
-                    <img src={twitter} className="icons" alt="Twitter" onClick={() => { submitClick("https://twitter.com/VishnuVardhanJS") }} />
-                    <img src={mail} className="icons" alt="Mail" onClick={() => { submitClick("mailto:vishnuvardhanjs@proton.me") }} />
+                    <div>
+                      <img src={github} className="icons" alt="GitHub" onClick={() => { submitClick("https://github.com/VishnuVardhanJS") }} />
+                      GitHub
+                    </div>
+                    <div>
+                      <img src={discord} className="icons" alt="Discord" onClick={() => { submitClick("https://discordapp.com/users/484766045920296961") }} />
+                      Discord
+                    </div>
+                    <div>
+                      <img src={linkedin} className="icons" alt="LinkedIn" onClick={() => { submitClick("https://www.linkedin.com/in/vishnuvardhanjs/") }} />
+                      LinkedIn
+                    </div>
+                    <div>
+                      <img src={twitter} className="icons" alt="Twitter" onClick={() => { submitClick("https://twitter.com/VishnuVardhanJS") }} />
+                      Twitter
+                    </div>
+                    <div>
+                      <img src={mail} className="icons" alt="Mail" onClick={() => { submitClick("mailto:vishnuvardhanjs@proton.me") }} />
+                      Mail
+                    </div>
 
                   </div>
-                  
+
                 </div>
               }</Animator>
               <div className='stars_pg_3'>
-                    <StarsBg />
+                <StarsBg />
               </div>
             </span>
           </div>
