@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/static/css/main.0374fe31.css",
+    "main.js": "/static/js/main.e1d86ba6.js",
+    "static/media/Ubuntu-Medium.ttf": "/static/media/Ubuntu-Medium.e37c5546eb1a6efc4818.ttf",
+    "static/media/Route.jpg": "/static/media/Route.ac5762f0a4a74a766821.jpg",
+    "static/media/Stay Classy.otf": "/static/media/Stay Classy.7633d510d6d08ed73079.otf",
+    "static/media/github.png": "/static/media/github.caeb9ff86e1c3e87612e.png",
+    "static/media/Kollab.jpg": "/static/media/Kollab.ba141d0ebc5867aa1224.jpg",
+    "static/media/Smile.jpg": "/static/media/Smile.665dd263542945ac69c3.jpg",
+    "static/media/FitBit.jpeg": "/static/media/FitBit.0b964da9c6ea7f6ff262.jpeg",
+    "static/media/discord.png": "/static/media/discord.55960cba794f3c2ba6fc.png",
+    "static/media/twitter.png": "/static/media/twitter.894988327f8d68209e91.png",
+    "static/media/mail.png": "/static/media/mail.a2f2146f929409405da0.png",
+    "static/media/linkedin.png": "/static/media/linkedin.f249b38224ca41a0b909.png",
+    "index.html": "/index.html",
+    "main.0374fe31.css.map": "/static/css/main.0374fe31.css.map",
+    "main.e1d86ba6.js.map": "/static/js/main.e1d86ba6.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.0374fe31.css",
+    "static/js/main.e1d86ba6.js"
+  ]
+}
