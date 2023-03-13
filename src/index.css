@@ -17,7 +17,7 @@ body {
   -ms-overflow-style: none;
   scrollbar-width: none;
   overflow: visible;
-  scroll-snap-type: y mandatory;
+  /* scroll-snap-type: y mandatory; */
 }
 
 ::-webkit-scrollbar {
