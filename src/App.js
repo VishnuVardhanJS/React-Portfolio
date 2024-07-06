@@ -25,7 +25,7 @@ export default function App() {
 
   useEffect(() => {
     FetchPopulation()
-  }, [])
+  })
 
   useEffect(() => {
     const interval = setInterval(() => {
