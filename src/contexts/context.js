@@ -32,8 +32,8 @@ export function StateProvider(props) {
     const FetchPopulation = () => {
         axios.get(`https://get-population.p.rapidapi.com/population`, {
             headers: {
-                'x-rapidapi-host': api_keys['host'],
-                'x-rapidapi-key': api_keys['key'],
+                'x-rapidapi-host': process.env.react_app_host,
+                'x-rapidapi-key': process.env.react_app_key,
             },
             // params: { category: 'all', count: '1' },
         })

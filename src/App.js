@@ -24,9 +24,13 @@ export default function App() {
   const { population, FetchPopulation, setMousePos, mousePos } = useContext(setStates)
 
   useEffect(() => {
+    FetchPopulation()
+  }, [])
+
+  useEffect(() => {
     const interval = setInterval(() => {
       FetchPopulation()
-    }, 1000);
+    }, 5000);
     return () => clearInterval(interval);
   }, [FetchPopulation])
 
