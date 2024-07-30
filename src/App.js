@@ -34,6 +34,7 @@ export default function App() {
     return () => clearInterval(interval);
   }, [FetchPopulation])
 
+  
   function submitClick(url) {
     window.open(url, '_blank', 'noopener,noreferrer');
   }

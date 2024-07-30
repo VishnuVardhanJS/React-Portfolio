@@ -69,6 +69,7 @@ export default function Cards() {
                                     {u.description}
                                 </Typography>
                             </CardContent>
+                            
                         </CardActionArea>
                     </Card>
 
